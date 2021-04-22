@@ -39,8 +39,8 @@
     </a> <a class="post-link" href="{{ $post->slug }}">
         <p class="description">{{ Str::words($post->excerpt, 10, '...') }}</p>
     </a>
-    <div class="tags"> <a href="tags/index.html#books">#books</a> <a
-            href="tags/index.html#read">#read</a> </div>
+    {{-- <div class="tags"> <a href="tags/index.html#books">#books</a> <a
+            href="tags/index.html#read">#read</a> </div> --}}
 </div>
 </div>
 </article>

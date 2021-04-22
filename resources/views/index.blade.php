@@ -13,7 +13,7 @@
                 <h1 class="title">Film Tadında Blog</h1>
                 <p class="description">Kim demiş Film gibi blog olurmu diye</p>
                 <p class="description">Tabiki de hiçkimse dememiş</p>
-                <div class="buttons"> <a href="welcome-to-the-desert-of-the-real/index.html" role="button"
+                <div class="buttons"> <a href="#" role="button"
                         class="button"> <svg>
                             <use xlink:href="#icon-read"></use>
                         </svg> <span>Hoşgeldin :*</span> </a> </div>
