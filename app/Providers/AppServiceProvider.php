@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use TCG\Voyager\Models\Page;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,5 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $page_data = Page::where('status', 'ACTIVE')->get();
+        View::share('pages', $page_data);
     }
 }

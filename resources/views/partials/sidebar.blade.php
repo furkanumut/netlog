@@ -3,10 +3,11 @@
     <nav id="navigation">
         <h2>Menu</h2>
         <ul>
-            <li> <a href="index.html">Home</a> </li>
-            <li> <a href="about/index.html">About</a> </li>
-            <li> <a href="contact/index.html">Contact</a> </li>
-            <li> <a href="feed.xml">Feed</a> </li>
+            <li> <a href="{{ route('landing-page') }}">Ana Sayfa</a> </li>
+            @foreach ($pages as $page)
+            <li> <a href="index.html">{{ $page->title }}</a> </li>
+            @endforeach
+            <li> <a href="{{ route('contact.create') }}">Iletişim</a> </li>
         </ul>
     </nav>
 </aside>
