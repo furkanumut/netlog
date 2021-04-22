@@ -19,10 +19,10 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 Route::get('/', 'IndexController@index')->name('landing-page');
-
 Route::group(['prefix' => '/contact', 'as' => 'contact.'], function () {
     Route::get('/', 'ContactController@create')->name('create');
     Route::post('/', 'ContactController@store')->name('store');
 });
 
+Route::get('/page/{page}', 'PageController@show');
 Route::get('/{post}', 'PostController@show')->name('post.show');
