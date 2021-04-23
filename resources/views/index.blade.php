@@ -10,7 +10,7 @@
             <div class="pixels"></div>
             <div class="gradient"></div>
             <div class="content"> <time datetime="2019-05-16T23:48:05+00:00" class="date">  </time>
-                <h1 class="title">Film Tadında Blog</h1>
+                <h1 class="title">{{ $title ?? 'Film Tadında Blog' }}</h1>
                 <p class="description">Kim demiş Film gibi blog olurmu diye</p>
                 <p class="description">Tabiki de hiçkimse dememiş</p>
                 <div class="buttons"> <a href="#" role="button"
