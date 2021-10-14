@@ -25,7 +25,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $page_data = Page::where('status', 'ACTIVE')->get();
-        View::share('pages', $page_data);
+	view()->composer('pages', function($view)
+	{
+            $page_data = Page::where('status', 'ACTIVE')->get();
+            $view->with('pages', $page_data);
+	});
     }
 }
