@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-	view()->composer('pages', function($view)
+	view()->composer('*', function($view)
 	{
             $page_data = Page::where('status', 'ACTIVE')->get();
             $view->with('pages', $page_data);
