@@ -1,8 +1,7 @@
 @extends('layouts.post')
 
 @section('content')
-@include('notify::messages')
-
+<x:notify-messages />
 <section class="content">
 
     <div class="post">

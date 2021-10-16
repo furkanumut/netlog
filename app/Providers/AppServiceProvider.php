@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 use TCG\Voyager\Models\Page;
 
 class AppServiceProvider extends ServiceProvider
@@ -30,5 +31,6 @@ class AppServiceProvider extends ServiceProvider
             $page_data = Page::where('status', 'ACTIVE')->get();
             $view->with('pages', $page_data);
 	});
+	Schema::defaultStringLength(191);
     }
 }
