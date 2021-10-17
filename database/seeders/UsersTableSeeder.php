@@ -21,6 +21,7 @@ class UsersTableSeeder extends Seeder
 
             User::create([
                 'name'           => 'Admin',
+                'biography'      => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse est nulla, vehicula a mauris accumsan, vehicula tempus neque. Donec lacinia, dui ac aliquet consectetur, lacus quam gravida ante, in blandit orci elit mattis magna.',
                 'email'          => 'admin@admin.com',
                 'password'       => bcrypt('password'),
                 'remember_token' => Str::random(60),

@@ -99,7 +99,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="locale">Biography</label>
-                                <textarea name="biography" class="form-control" cols="30" rows="5"></textarea>
+                                <textarea name="biography" class="form-control" cols="30" rows="5">{{ old('biography', $dataTypeContent->biography ?? '') }}</textarea>
                             </div>
                         </div>
                     </div>
