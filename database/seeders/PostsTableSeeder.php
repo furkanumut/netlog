@@ -327,7 +327,7 @@ class PostsTableSeeder extends Seeder
         if (!$post->exists) {
             $post->fill([
                 'title'            => 'Lorem Ipsum Post',
-                'author_id'        => 0,
+                'author_id'        => 1,
                 'category_id' => 1,
                 'seo_title'        => null,
                 'excerpt'          => 'This is the excerpt for the Lorem Ipsum Post',
@@ -345,7 +345,7 @@ class PostsTableSeeder extends Seeder
         if (!$post->exists) {
             $post->fill([
                 'title'     => 'My Sample Post',
-                'author_id' => 0,
+                'author_id' => 1,
                 'category_id' => 1,
                 'seo_title' => null,
                 'excerpt'   => 'This is the excerpt for the sample Post',
@@ -365,7 +365,7 @@ class PostsTableSeeder extends Seeder
         if (!$post->exists) {
             $post->fill([
                 'title'            => 'Latest Post',
-                'author_id'        => 0,
+                'author_id'        => 1,
                 'category_id' => 2,
                 'seo_title'        => null,
                 'excerpt'          => 'This is the excerpt for the latest post',
@@ -383,7 +383,7 @@ class PostsTableSeeder extends Seeder
         if (!$post->exists) {
             $post->fill([
                 'title'     => 'Yarr Post',
-                'author_id' => 0,
+                'author_id' => 1,
                 'category_id' => 2,
                 'seo_title' => null,
                 'excerpt'   => 'Reef sails nipperkin bring a spring upon her cable coffer jury mast spike marooned Pieces of Eight poop deck pillage. Clipper driver coxswain galleon hempen halter come about pressgang gangplank boatswain swing the lead. Nipperkin yard skysail swab lanyard Blimey bilge water ho quarter Buccaneer.',
