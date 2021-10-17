@@ -15,7 +15,7 @@
     @yield('content')
 
     @include('partials.footer')
-    @stack('scheme.json')
+    @stack('schema.json')
 
 
     <!-- Include the website scripts -->

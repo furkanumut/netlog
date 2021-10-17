@@ -210,38 +210,26 @@
 </script>
 @endsection
 
-@push('scheme.json')
+@push('schema.json')
 <script type="application/ld+json">
     {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "Thiago Rossener",
-
-        "image": "/assets/img/uploads/profile.png",
-
-        "jobTitle": "Chief Editor",
-        "url": "/authors/thiagorossener/",
-        "sameAs": [
-          "https://github.com/thiagorossener","https://www.facebook.com/thiagorossener","https://twitter.com/thiagorossener","https://medium.com/@thiagorossener","https://www.instagram.com/thiagorossener","https://www.linkedin.com/in/thiagorossener"
-        ]
-    }
-</script>
-<script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "name": "Jekflix",
-      "description": "Jekflix is a template for Jekyll inspired by Netflix and made by Thiago Rossener.",
-      "url": "/",
-      "logo": {
-          "@type": "ImageObject",
-          "url": "/assets/img/icons/mediumtile.png",
-          "width": "600",
-          "height": "315"
-      },
-      "sameAs": [
-        "https://github.com/github_username","https://www.facebook.com/facebook_username","https://twitter.com/twitter_username","https://medium.com/@medium_username","https://www.instagram.com/instagram_username","https://www.linkedin.com/in/linkedin_username"
-      ]
-    }
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{ $post->title }}",
+        "image": "{{ asset(Storage::url($post->image)) }}",
+        "author": {
+          "@type": "Person",
+          "name": "{{ $author->name }}"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "{{ setting('site.title') }}",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ setting('site.logo') }}"
+          }
+        },
+        "datePublished": "{{ $post->created_at }}"
+      }
 </script>
 @endpush
