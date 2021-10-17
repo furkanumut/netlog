@@ -83,7 +83,7 @@
         </div>
     </div>
 
-    <a href="../welcome-to-the-desert-of-the-real/index.html" class="post-preview">
+    <a href="{{ route('post.show', $read_next->slug) }}" class="post-preview">
         <div class="image">
 
             <img src="{{ asset(Storage::url(substr($read_next->image, 0, -4).'-small'.substr($read_next->image, -4)))}}" alt="{{ $read_next->title.', '.$read_next->category->name.', '.config('APP_NAME') }}">
