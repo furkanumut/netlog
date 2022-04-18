@@ -19,10 +19,6 @@
 
     <!-- Include the website scripts -->
     <script src="{{ asset('assets/js/scripts.min.js') }}"></script>-+
-    @if (setting('site.google_analytics_tracking_id') & config('APP_ENV') != 'local' )
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ setting('site.google_analytics_tracking_id') }}">
-    </script>
-    @endif
     @stack('extra-js')
 </body>
 

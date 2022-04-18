@@ -23,3 +23,15 @@
             href="https://yazilimcibiradam.com/">Furkan Umut Ceylan</a> </p>
 </footer>
 <!-- END FOOTER  -->
+
+    @if (setting('site.google_analytics_tracking_id') AND config('APP_ENV') != 'local' )
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ setting('site.google_analytics_tracking_id') }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{ setting('site.google_analytics_tracking_id') }}');
+    </script>
+
+    @endif
