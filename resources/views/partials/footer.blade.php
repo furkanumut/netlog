@@ -13,12 +13,7 @@
             </svg> </a> <a href="https://www.linkedin.com/in/linkedin_username" title="LinkedIn"> <svg>
                 <use xlink:href="#icon-linkedin"></use>
             </svg> </a> </p>
-    <ul>
-        <li> <a href="index.html">Home</a> </li>
-        <li> <a href="about/index.html">About</a> </li>
-        <li> <a href="contact/index.html">Contact</a> </li>
-        <li> <a href="feed.xml">Feed</a> </li>
-    </ul>
+   @include('partials.menu')
     <p> Frontend by <a href="https://rossener.com/" target="_blank" class="creator">Thiago Rossener</a> & Backend by <a
             href="https://yazilimcibiradam.com/">Furkan Umut Ceylan</a> </p>
 </footer>
