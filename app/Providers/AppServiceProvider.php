@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use TCG\Voyager\Models\Page;
+use App\Models\SocialMediaUrl;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -28,8 +29,10 @@ class AppServiceProvider extends ServiceProvider
     {
 	view()->composer('*', function($view)
 	{
-            $page_data = Page::where('status', 'ACTIVE')->get();
-            $view->with('pages', $page_data);
+        $page_data = Page::where('status', 'ACTIVE')->get();
+        $social_media_urls = SocialMediaUrl::orderBy('updated_at','desc')->get();
+        $view->with('pages', $page_data);
+        $view->with('social_media_urls', $social_media_urls);
 	});
 	Schema::defaultStringLength(191);
     }
