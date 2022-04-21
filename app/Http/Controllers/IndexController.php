@@ -9,7 +9,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $posts = Post::latest()->get();
+        $posts = Post::latest()->published()->get();
         return view('index', compact('posts'));
     }
 }

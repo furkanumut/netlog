@@ -1,5 +1,5 @@
 @extends('layouts.post')
-
+@section('title', $post->title)
 @section('content')
 <section class="post {{ !$more_posts->isEmpty() ? 'two-columns' : 'one-column' }}">
     <article role="article" class="post-content">
