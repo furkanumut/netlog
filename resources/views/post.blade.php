@@ -24,10 +24,10 @@
         <h1 class="post-title">{{ $post->title }}</h1>
         <p class="post-subtitle">{{ $post->excerpt }}</p>
 
-
+        @if($post->image)
         <img src="{{ asset(Storage::url($post->image)) }}"
             alt="{{ $post->title.', '.$post->category->name.', '.config('APP_NAME') }}" class="post-cover">
-
+        @endif
 
         <!-- Pagination links -->
 
