@@ -11,8 +11,9 @@ class PostController extends Controller
     {
         if ($post->status != Post::PUBLISHED AND ( ! \Auth::check() OR (! \Auth::user()->hasRole('admin')) ) )
             abort(404);
-        $read_time_minutes = floor(str_word_count(strip_tags($post->body))/70);
-        $read_time_second = floor(str_word_count(strip_tags($post->body)) % 70 / (70 / 60));
+        $read_wpm = 120;
+        $read_time_minutes = floor(str_word_count(strip_tags($post->body))/$read_wpm);
+        $read_time_second = floor(str_word_count(strip_tags($post->body)) % $read_wpm / ($read_wpm / 60));
         $more_posts = $post->category->posts()->where('id', '!=', $post->id)->latest()->limit(5)->get();
 
         $read_next = Post::where('id', '>', $post->id)->first();
