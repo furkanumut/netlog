@@ -1,5 +1,11 @@
 @extends('layouts.post')
 @section('title', $post->title)
+@section('description', $post->meta_description)
+@section('keywords', $post->meta_keywords)
+@if($post->image)
+    @section('image', $post->image)
+@endif
+
 @section('content')
 <section class="post {{ !$more_posts->isEmpty() ? 'two-columns' : 'one-column' }}">
     <article role="article" class="post-content">
