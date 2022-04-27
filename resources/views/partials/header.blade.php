@@ -5,8 +5,10 @@
             <use xlink:href="#icon-menu"></use>
         </svg>
     </a>
-    <h1 class="logo"> <a href="{{ route('landing-page') }}"> {{ env('APP_NAME') }} <span class="version">Furkan Umut</span> </a> </h1> <a id="search"
-        class="dosearch" role="button"> <svg class="icon-search">
+    <h4 class="logo">
+        <a href="{{ route('landing-page') }}"> {{ env('APP_NAME') }} <span class="version">Furkan Umut</span> </a>
+    </h4>
+    <a id="search" class="dosearch" role="button"> <svg class="icon-search">
             <use xlink:href="#icon-search"></use>
         </svg> </a> <a href="https://github.com/thiagorossener/jekflix-template" class="get-theme" role="button">
         Tema Özgür Yazılım! </a>
