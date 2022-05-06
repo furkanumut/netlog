@@ -24,6 +24,7 @@ Route::group(['prefix' => '/contact', 'as' => 'contact.'], function () {
     Route::post('/', 'ContactController@store')->name('store');
 });
 
+Route::get('/sitemap.xml', 'SitemapController@create')->name('sitemap');
 Route::get('/page/{page}', 'PageController@show')->name('page.show');
 Route::get('/category/{category}', 'CategoryController@show')->name('category.show');
 Route::get('/{post}', 'PostController@show')->name('post.show');
